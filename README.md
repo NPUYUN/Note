@@ -34,7 +34,7 @@ graph TD
 
 #### Git
 [视频教程](https://www.bilibili.com/video/BV1vy4y1s7k6/?vd_source=5b8f11e7177b71b6595f8aece955601f)
-[文字教程](https://missing.csail.mit.edu/2020/version-control/)
+[文字教程](https://git-scm.com/book/zh/v2)
 [交互式教程](https://learngitbranching.js.org/?locale=zh_CN)
 [拓展](https://cbea.ms/git-commit/)
 

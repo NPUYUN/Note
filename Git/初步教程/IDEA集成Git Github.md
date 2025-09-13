@@ -57,3 +57,10 @@
 和集成Git类似，图形化界面显示较为简单，不再赘述
 主要操作仍为 **Push** **Pull** **Clone**
 > URL: 链接地址
+
+# IDEA集成Gitee
+和集成Github类似，但需要手动安装Gitee插件
+Gitee可以直接复制和迁移Github项目，只需新建项目时转到最下角导入已有库，附有**同步**(即强制刷新)的功能
+
+> Gitee推荐使用 **Http** 传输
+> Github推荐使用 **SSH** 传输

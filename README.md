@@ -15,9 +15,10 @@
 ```mermaid
 graph TD
     A[Markdown] --> B[LaTex]
-    A --> C[Linux]
-    C --> D[Vim]
+    A --> C[Vim]
+    C --> D[Linux]
     E(Git/Github) --> F(Python)
+    E --> D
     G((Ëã·¨½ø½×))
 ```
 

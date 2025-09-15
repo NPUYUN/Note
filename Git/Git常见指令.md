@@ -1,146 +1,104 @@
-# 配置相关
+# 创建命令
 ``` bash
-git init       # 初始化本仓库（创建新仓库）                            
-git config --global user.name "xxx"             # 配置用户名    
-git config --global user.email "xxx@xxx.com"    # 配置邮件    
-git config --global color.ui true               # git status等命令自动色               
-git config --global color.status auto    
-git config --global color.diff auto    
-git config --global color.branch auto    
-git config --global color.interactive auto    
-git config --global http.proxy                  # 查看当前代理设置      
-git config --global http.proxy 'http://127.0.0.1:1080'  # 设置http代理??    
-git config --global https.proxy 'socks5://127.0.0.1:1080' # 设置https代理??   
-git config --global --unset http.proxy    #删除 proxy git config
+git clone <url>	克隆远程仓库
+git init	初始化本地 git 仓库（即创建新的本地仓库）
 ```
 
-# 代码与提交相关
+# 本地更改
 ``` bash
-git status                           # 查看当前版本状态   
-git add t.txt                        # 添加单个文件至暂存区   
-git add .     # 增加所有更改过的文件至index，不包括删除               
-git add -u    # 仅增加所有已经跟踪的文件至index，不包括新文件         
-git add -A    # git add . 和 git add -u的合集      
-git commit -m 'xxx'                  # 提交    
-git commit --amend -m 'xxx'          # 合并上一次提交（用于反复修改）    
-git commit -am 'xxx'                 # 将add和commit合为一步    
-git rm xxx                           # 删除index中的文件    
-git rm -r *                          # 递归删除    
-git log                              # 显示提交日志    
-git log -1                           # 显示1行日志 -n为n行      
-git log --stat                       # 显示提交日志及相关变动文件    
-git log -p -m    
-git log -- filename                  # 查看文件的修改日志     
-git show xxxx                        # 显示某个提交的详细内容    
-git show dfb02                       # 可只用commitid的前几位    
-git show HEAD                        # 显示HEAD提交日志    
-git show HEAD^                       # 显示上一个版本的提交日志 ^^为上两个版本 ^5为上5个版本                    
-git whatchanged                      # 显示提交历史对应的文件修改    
-git revert xxxxxx                    # 撤销提交xxxxx
-git reset xxxxxx(历史提交位置)        # 撤销HEAD到xxxxx(对远程分支无效)
-
+git status	查看当前分支状态
+git diff	查看已跟踪文件的变更
+git add <file>	将指定的文件添加到暂存区
+git add .	将所有有变更的文件添加到暂存区
+git commit -a	提交所有本地修改
+git commit -m "xxx"	把已添加至暂存区的文件执行提交，并以 xxx 作为本次提交的描述
+git commit --amend -m "xxx"	修改上一次提交（请勿用该命令修改已发布的提交）
+git commit -am "xxx"	该命令是 git add . 和 git commit -m "xxx" 的快捷方式
+git stash	暂存当前修改，将所有置为 HEAD 状态
+git stash list	查看所有暂存列表
+git stash push	把当前工作区的文件暂存到临时空间
+git stash pop	把文件从临时空间中恢复到当前工作区
 ```
 
-# tag相关
-```bash
-git tag                              # 列出所有标签
-git tag -l "v1*"                     # 支持模糊匹配
-git tag v2.3 <引用名称>               # 创建标签，默认为在HEAD创建
-git tag v2.4 -a -m "test"            # 创建轻量标签，用作临时使用（-a 可以省略）
-git push origin v1.0                 # 推送单个标签
-git push origin --tags               # 推送全部标签
-git tag -d v1.0                      # 删除标签
-git push origin -- delete v1.0       # 从远程库中删除标签
-git checkout v1.1                    # 检出标签
-git checkout -b v1.1-dev v1.1        # 在某个 tag 的基础上提交代码(创建一个新分支)
-git diff                             # 显示所有未添加至index的变更    
-git diff --cached                    # 显示所有已添加index但还未commit的变更    
-git diff HEAD^                       # 比较与上一个版本的差异    
-git diff HEAD -- ./lib               # 比较与HEAD版本lib目录的差异    
-git diff origin/master..master        # 比较远程分支master上有本地分支master上没有的                   
-git diff origin/master..master --stat # 只显示差异的文件，不显示具体内容
+# 提交历史
+``` bash
+git log	查看提交日志
+git log -n	显示 n 行日志，n 为整数
+git log --stat	查看本地提交日志
+git show <commit>	查看提交日志及相关变动文件
+git show HEAD	查看 HEAD 提交日志
+git show HEAD^	查看 HEAD 的上一个版本提交日志。另外，git show HEAD^^ 是查看上 2 个版本的提交日志；git show HEAD^5 是查看上 5 个版本的提交日志
+git blame <file>	对于指定文件，逐行显示提交的哈希ID、提交者、提交日期以及修改的内容
+git whatchanged	显示提交历史，以及每次提交变更的文件
 ```
 
-# 分支相关
+# 分支和标签
 ``` bash
-git clone git+ssh://git@xxx.xxx.xxx.xxx/xx.git       # clone远程仓库    
-git remote add origin git+ssh://git@xxx.xxx.xxx.xxx/xx.git # 增加远程定义（用于push/pull/fetch）    
-git branch                           # 显示本地分支    
-git branch --contains 50089          # 显示包含提交50089的分支    
-git branch -a                        # 显示所有分支    
-git branch -r                        # 显示所有原创分支    
-git branch --merged                  # 显示所有已合并到当前分支的分支    
-git branch --no-merged               # 显示所有未合并到当前分支的分支    
-git branch -m master master_copy     # 本地分支改名    
-git branch -f 分支名 历史提交位置      # 强行将分支指向该历史提交 
-git checkout -b master_copy          # 从当前分支创建新分支master_copy并检出    
-git checkout -b master master_copy   # 上面的完整版    
-git checkout dev/minibear2333        # 检出已存在的分支    
-git checkout --track dev/minibear2333   # 检出远程分支dev/minibear2333并创建本地跟踪分支    
-git checkout v2.0                    # 检出版本v2.0    
-git checkout -b devel origin/develop # 从远程分支develop创建新本地分支devel并检出    
-git checkout -- README               # 检出head版本的README文件（可用于修改错误回退）    
-git merge origin/master              # 合并远程master分支至当前分支    
-git cherry-pick xxxxxx               # 合并提交xxxxxx的修改（xxxx可以为多个提交记录）    
-git push origin master               # 将当前分支push到远程master分支    
-git push origin :dev/minibear2333    # 删除远程仓库的dev/minibear2333分支    
-git fetch                            # 获取所有远程分支（不更新本地分支，另需merge）    
-git fetch --prune                    # 获取所有原创分支并清除服务器上已删掉的分支    
-git pull origin master               # 获取远程分支master并merge到当前分支    
-git mv README README2                # 重命名文件README为README2    
-git reset --hard HEAD                # 将当前版本重置为HEAD（通常用于merge失败回退）    
-git rebase                           # 合并分支，创造更线性的提交历史(取出一系列的提交记录，在另一个地方放下去)
-git rebase -i xxxxx                  # 打开xxxxx提交UI界面，可调整顺序以及取舍等
-git branch -d dev/minibear2333       # 删除分支dev/minibear2333（需要确认本分支修改已合并到其他分支）    
-git branch -D dev/minibear2333       # 强制删除分支dev/minibear2333，小心操作    
-git ls-files                         # 列出git index包含的文件    
-git show-branch                      # 图示当前分支历史    
-git show-branch --all                # 图示所有分支历史
+git branch	查看本地分支
+git branch -r	查看远程分支
+git branch -a	查看所有分支（本地和远程）
+git branch --merged	查看所有分支已合并到当前分支的分支
+git branch --no-merged	查看所有分支未合并到当前分支的分支
+git branch -m <new-branch>	把当前分支的名称改成 new-branch；如果 new-branch 已存在，将不会执行改名
+git branch -M <new-branch>	强制把当前分支的名称改成 new-branch（即使 new-branch 已存在）
+git branch -m <old-branch> <new-branch>	把分支 old-branch 的名称改成 new-branch，如果 new-branch 已存在，将不会执行改名
+git branch -M <old-branch> <new-branch>	强制把分支 old-branch 的名称改成 new-branch（即使 new-branch 已存在）
+git checkout <branch-name>	切换到 branch-name 分支
+git branch <new-branch>	新建分支（也可以用 git checkout -b <new-branch>）
+git branch --track <new> <remote>	基于远程分支创建一个新分支，同 git checkout --track <remote/branch>
+git branch -d <branch-name>	删除本地分支
+git tag	列出所有本地标签
+git tag <tag-name>	基于最新的提交创建标签
+git tag -d <tag-name>	删除标签
 ```
 
-# 图示命令
+# 删除命令
 ``` bash
-git ls-tree HEAD                   # 内部命令：显示某个git对象    
-git rev-parse v2.0                 # 内部命令：显示某个ref对于的SHA1 HASH    
-git reflog                         # 显示所有提交，包括孤立节点    
-git show xxx                       # 查看xxx提交改变了哪些文件内容  
-git show HEAD                      # 显示当前分支昨天的状态    
-git log --pretty=format:'%h %s' --graph             # 图示提交日志    
-git show HEAD~3                    # 查看倒数第三次提交改变了哪些内容  
-git show -s --pretty=raw xxxxxx
+git rm <file>	删除文件（将从磁盘中删除文件）
+git rm -r <directory>	递归删除指定目录下的文件
+git rm --cached <file>	停止跟踪文件，不会从磁盘中删除
 ```
 
-# 暂存相关
+# 合并和衍合
 ``` bash
-git stash                            # 暂存当前修改，将所有至为HEAD状态    
-git stash list                       # 查看所有暂存    
-git stash show -p stash@{0}          # 参考第一次暂存    
-git stash apply stash@{0}            # 应用第一次暂存
+git merge <branch>	合并指定分支到当前分支，保留两个
+git rebase <branch>	合并指定分支到当前分支，只保留一个
+git rebase --abort	终止 rebase 操作，即回到执行 rebase 之前的状态
+git rebase --continue	解决冲突后继续执行 rebase
+git mergetool	使用配置文件指定的 mergetool 解决冲突
+git add <resolved-file>
+git rm <resolved-file>
+使用编辑器手动解决文件冲突，并在冲突解决后，把文件标记为 resolved
 ```
 
-# 查找
+# 撤销命令
 ``` bash
-git grep "delete from"               # 查找当前分支下的文件内容，可以git grep --help看具体用法                              
-git grep "delete from" v2.0          # 指定tag来查找
+git reset --hard HEAD	将当前版本重置为 HEAD（用于 merge 失败的时候）
+git reset <commit>	将当前版本重置为某一个提交状态，代码不变
+git reset --hard <commit>	强制将当前版本重置为某一个提交状态，并丢弃那个状态之后的所有修改（请谨慎使用该命令）
+git reset --merge <commit>	将当前版本重置为某一个提交状态，并保留版本库中不同的文件
+git reset --keep <commit>	将当前版本重置为某一个提交状态，并保留未提交的本地修改
+git revert <commit>	撤销提交
+git restore <file>	丢弃指定文件的修改信息，即恢复到文件修改前的状态
+git checkout -- <file>	同 git restore <file> 命令
+git checkout HEAD <file>	对于指定文件，丢弃该文件的本地修改信息
+git clean	清除工作目录中未跟踪的文件
+git clean -n	列出哪些文件将从工作目录中删除
 ```
 
-# 追踪
+# 配置命令
 ``` bash
-git update-index —assume-unchanged 文件名      # 取消本地跟踪    
-git update-index —no-assume-unchanged 文件名   # 恢复本地跟踪    
-git ls-files -v| grep '^h\ '                  # 可以看到本地不跟踪的文件
+git config --list	列出当前 Git 配置
+git config --global user.name <name>	把参数 name 设置为当前用户使用的提交者的姓名；如果未指定 name 参数，则显示当前用户使用的提交者姓名
+git config --global user.email <email>	把参数 email 设置为当前用户使用的提交者的邮箱；如果未指定 email 参数，则显示当前用户使用的提交者邮箱
+git config --global alias.<alias> <command>	为 Git 命令创建全局的别名。比如，执行 alias.glog log --graph --oneline --decorate 命令后，git glog 就相当于 git log --graph --oneline --decorate。
+git config --system core.editor <editor>	对于本机的所有用户，设置命令使用的编辑器（比如 vim）
+git config --global --edit	在编辑器中打开全局配置文件（用于手动修改）
+git config --global color.ui auto	使用不同的颜色渲染 Git 命令的输出结果
 ```
 
-# 管理远程分支
+# 其他命令
 ``` bash
-git remote              # 不带参数，列出已经存在的远程分支                          
-git remote -v           #(-v是–verbose 的简写,取首字母)列出详细信息，在每一个名字后面列出其远程url                          
-git remote add [shortname]  url              #添加远程仓库    
-git fetch origin        # 字符串 origin 指代对应的仓库地址了.比如说,要抓取所有 origin 有的,但本地仓库没有的信息,可以用
-```
-
-# 相对引用
-``` bash
-<引用名称>^                       # 向上移动一个的提交记录
-<引用名称>~<num>                  # 向上移动多个的提交记录
+git var -l	列出 Git 环境变量
+git help <command>	显示指定命令的帮助（将呼出该命令的 man 文件）
 ```

@@ -48,4 +48,7 @@ graph TD
 [教程](https://mirrors.bfsu.edu.cn/CTAN/info/lshort/chinese/lshort-zh-cn.pdf)
 [练习](https://www.overleaf.com/)
 
+#### Python
+[基础教程](https://www.codecademy.cn/tutorial/python/)
+
 [回到顶部](#自学笔记)

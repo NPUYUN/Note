@@ -10,6 +10,7 @@
 - [ ] 算法进阶：学习算法进阶课，熟悉常见的算法流程，备赛**蓝桥杯国赛**
 - [ ] Git/Github：熟悉使用Git/Github来管理自己的代码
 - [ ] LaTex：熟练使用LaTex代替word进行**论文**的书写
+- [ ] Java：熟练使用Java进行项目开发
 
 ### 流程
 ```mermaid
@@ -52,3 +53,6 @@ graph TD
 [基础教程](https://www.codecademy.cn/tutorial/python/)
 
 [回到顶部](#自学笔记)
+
+### Java
+[基础教程](https://how2j.cn/)

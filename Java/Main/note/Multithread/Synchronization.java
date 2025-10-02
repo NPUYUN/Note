@@ -16,15 +16,17 @@ class Human{
         age --;
     }
 
-    public boolean isDead(){
-        Random r  = new Random();
-        return age >= r.nextInt(100);
+    public Human(String name , int age){
+        this.name = name;
+        this.age = age;
     }
 
-    public void live(){
-        this.age ++;
-        System.out.println("正在变老");
-        if(this.isDead()) System.out.println(this.name + " die " + this.age);
+    public synchronized boolean isDead(){ // 直接在方法前加上synchronized，可以达到和方式二一样的效果
+        return age >= 50 ;
+    }
+
+    public String toString(){
+        return name + " " + age;
     }
 }
 
@@ -74,13 +76,101 @@ public class Synchronization {
         };
         th2.start();
 
-        // 方式二：在方法内部使用该类对象作为同步对象
-        final Human man = new Human();
-        man.name = "YCC";
-        man.age = 18;
+        // 方式二：使用该类对象作为同步对象
+        final Human man = new Human("YCC" , 18);
+        List<Thread> threads1 = new ArrayList<>();
+        List<Thread> threads2 = new ArrayList<>();
 
-        for
+        for (int i = 0 ; i <= 9 ; i ++){
+            int t = i;
+            Thread th3 = new Thread(){
+                public void run(){
+                    synchronized (man){ // 方法一：直接用该类对象作为同步对象
+                        man.young();
+                    }
+
+                    try{
+                        Thread.sleep(200);
+                    }
+                    catch (InterruptedException e){
+                        System.out.println("ERROR");
+                    }
+                }
+            };
+            threads1.add(th3);
+        }
+
+        for(int i = 0 ; i <= 9 ; i ++){
+            int t = i;
+            Thread th3 = new Thread(){
+                public void run(){
+                    man.older(); // 方法二：在方法内部使用该类对象作为同步对象
+                }
+            };
+            try{
+                Thread.sleep(200);
+            }
+            catch (InterruptedException e){
+                System.out.println("ERROR");
+            }
+            threads2.add(th3);
+        }
+
+        for(Thread t : threads1){
+            try{
+                t.join();
+            }
+            catch (InterruptedException e){
+                System.out.println("ERROR");
+            }
+        }
+
+        for(Thread t : threads2){
+            try{
+                t.join();
+            }
+            catch (InterruptedException e){
+                System.out.println("ERROR");
+            }
+        }
+        System.out.println(man);
 
         // 方式三：在方法前加上修饰符synchronized
+        // 为方式二的简化写法，不再赘述
+
+        // 线程安全的类：类中所以方法都是被synchronized修饰的
+        // 非线程安全的类：由于不需要同步，速度更快
+        // 常见非线程安全类:
+        // List: ArrayList , LinkedList , Stack
+        // Map: HashMap , TreeMap
+        // Set: HashSet , TreeSet
+        // StringBuffer
+
+        // 常见对比
+        // HashMap 和 Hashtable
+        // HashMap: 可以存放null，非线程安全
+        // Hashtable: 不可以存放null，线程安全
+
+        // StringBuffer 和 StringBuilder
+        // StringBuffer：线程安全
+        // StringBuilder：非线程安全
+
+        // ArrayList 和 Vector
+        // ArrayList: 非线程安全
+        // Vector: 线程安全
+
+        // 将非线程安全的集合转换为线程安全：工具类Collections
+        // List：synchronizedList
+        List list = new ArrayList();
+        List synchronizedList = Collections.synchronizedList(list);
+
+        // Map: synchronizedMap
+        Map map = new HashMap();
+        Map synchronizedMap = Collections.synchronizedMap(map);
+
+        // Set: synchronizedSet
+        Set set = new HashSet();
+        Set synchronizedSet = Collections.synchronizedSet(set);
+
     }
 }

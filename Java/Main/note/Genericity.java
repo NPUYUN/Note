@@ -5,9 +5,13 @@ class Man1{
     LinkedList<String> list = new LinkedList<>();
 }
 
-// 支持泛型的类，内部的泛型可以写成<T>，表示与类的泛型一致，为任意泛型
+// 支持泛型的类，内部的类型可以写成 T，表示与类的泛型一致，为任意泛型
 class Man2<T>{
     LinkedList<T> list = new LinkedList<>();
+    public T info; // 泛型属性
+    public T Op(){ // 泛型方法
+        return (T)info;
+    }
 }
 
 class Father{

@@ -98,7 +98,7 @@ public class ArrayLists {
         // 遍历
         List<man> mens = new ArrayList<>();
         for(int i = 0 ; i < 5 ; i ++){
-            mens.add(new man("man - " + i));
+                mens.add(new man("man - " + i));
         }
         // for循环遍历
         for(int i = 0 ; i < mens.size() ; i ++){

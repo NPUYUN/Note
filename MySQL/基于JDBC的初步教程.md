@@ -28,9 +28,10 @@ create table 表名(
 - 约束条件：
   - **NOT NULL**：列值不可为空
   - **PRIMARY KEY**：主键（唯一且非空）
-  - **AUTO_INCREMENT**：自增（常用于主键）
+  - **AUTO_INCREMENT**：自增（常用于主键），配合主键使用
   - **DEFAULT 值**：默认值
   - **UNIQUE**：唯一约束
+  - 表级约束条件：约束条件(要约束的列名)
 
 
 ## 插入数据
@@ -50,10 +51,10 @@ INSERT INTO 表名 VALUES (值1, 值2, 值3, ...);
 SELECT [DISTINCT] 列名1, 列名2, ... FROM 表名 [WHERE 条件] [ORDER BY 列名 [ASC|DESC]] [LIMIT 偏移量, 行数];
 []内为可选项
 ```
-- ?DISTINCT?：去除重复记录（默认保留所有）
-- WHERE?：过滤条件（支持比较运算符和逻辑运算符）
-- ORDER BY?：排序（ASC升序，DESC降序）
-- LIMIT?：限制返回行数（分页时常用）
+- DISTINCT：去除重复记录（默认保留所有）
+- WHERE：过滤条件（支持比较运算符和逻辑运算符）
+- ORDER BY：排序（ASC升序，DESC降序）
+- LIMIT：限制返回行数（分页时常用）
 
 列名1，列名2...可替换为：
 - *：查询所有数据

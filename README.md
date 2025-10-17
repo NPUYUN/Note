@@ -11,20 +11,46 @@
 - [ ] Git/Github：熟悉使用Git/Github来管理自己的代码
 - [ ] LaTex：熟练使用LaTex代替word进行**论文**的书写
 - [ ] Java：熟练使用Java进行项目开发
+- [ ] Web三件套：熟练HTML、CSS、JavaScript，能够独立完成简单的网页设计
 
 ### 流程
 ```mermaid
-graph TD
-    A[Markdown] --> B[LaTex]
-    A --> C[Vim]
-    C --> D[Linux]
-    E(Git/Github) --> F(Python)
-    E --> D
-    E --> H[Java]
-    H --> I[HTML]
-    I --> J[CSS]
-    J --> K[JavaScript]
-    G((算法进阶))
+graph LR
+    A[Git/Github]
+    B[Markdown]
+    C[Vim]
+    D[Linux]
+    E(Python)
+    F[Java]
+    G[HTML]
+    H[CSS]
+    I[JavaScript]
+    J((算法进阶))
+    K[数学建模]
+    L[LaTex]
+    M((Spicy))
+    N((NumPy))
+    O((Matplotlib))
+    P((Pandas))
+
+    A --> B
+    A --> E
+    A --> F
+    B --> C
+    B --> G
+    B --> L
+    C --> D
+    E --> M
+    E --> N
+    E --> O
+    E --> P
+    G --> H
+    H --> I
+    L --> K
+    M --> K
+    N --> K
+    O --> K
+    P --> K
 ```
 
 ### 学习参考
@@ -55,8 +81,17 @@ graph TD
 
 #### Python
 [基础教程](https://www.codecademy.cn/tutorial/python/)
-
-[回到顶部](#自学笔记)
+[Scipy文档](https://docs.scipy.org.cn/doc/scipy/)
+[NumPy文档](https://numpy.org/doc/stable/user/index.html)
+[Matplotlib文档](https://matplotlib.org/stable/users/index.html)
+[Pandas文档](https://pandas.pydata.org/docs/user_guide/index.html)
 
 ### Java
 [基础教程](https://how2j.cn/)
+
+### Web
+[HTML文档](https://developer.mozilla.org/zh-CN/docs/Learn/HTML)
+[CSS文档](https://developer.mozilla.org/zh-CN/docs/Learn/CSS)
+[JavaScript文档](https://developer.mozilla.org/zh-CN/docs/Learn/JavaScript)
+
+[回到顶部](#自学笔记)

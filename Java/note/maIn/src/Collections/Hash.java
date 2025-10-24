@@ -16,7 +16,7 @@ public class Hash {
         dic.put("1" , "I");
         dic_t.put("1" , "I");
 
-        // 查找键对应的值：get(Key)
+        // 查找键对应的值：get(Key)或者get(index)
         System.out.println(dic.get("1"));
         System.out.println(dic_t.get("1"));
 

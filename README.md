@@ -1,19 +1,19 @@
-# ×ÔÑ§±Ê¼Ç
-> ËµÃ÷£ºÓÉÓÚ´óÒ»¶Ô´óÑ§µÄÈÏÊ¶²»×ã£¬ËìÓÚ´ó¶ş¿ªÊ¼½øĞĞ×ÔÑ§£¬½ÓÏÂÀ´ÎÒ½«¶Ô´Ó´ó¶ş¿ªÊ¼µÄ×ÔÑ§Ö®Â·½øĞĞ°²ÅÅ
+# è‡ªå­¦ç¬”è®°
+> è¯´æ˜ï¼šç”±äºå¤§ä¸€å¯¹å¤§å­¦çš„è®¤è¯†ä¸è¶³ï¼Œé‚äºå¤§äºŒå¼€å§‹è¿›è¡Œè‡ªå­¦ï¼Œæ¥ä¸‹æ¥æˆ‘å°†å¯¹ä»å¤§äºŒå¼€å§‹çš„è‡ªå­¦ä¹‹è·¯è¿›è¡Œå®‰æ’
 
-## ´ó¶şÉÏ
-### ºËĞÄÈÎÎñ
-- [ ] markdown£ºÊìÏ¤markdown»ù±¾Óï·¨£¬²¢Ó¦ÓÃÓÚÈÕ³£µÄ**±Ê¼Ç**ÊéĞ´
-- [ ] Vim£ºÊìÁ·Ê¹ÓÃVim½øĞĞÎÄ±¾±à¼­£¬²¢Öğ½¥Ìæ´úwordµÈ³ÉÎªÖ÷Á÷**ÎÄ±¾±à¼­Æ÷**
-- [ ] Linux£ºÊìÏ¤Linux³£¼ûÖ¸ÁîÒÔ¼°Ê¹ÓÃ·½·¨£¬Öğ²½½«**¿ª·¢¹¤×÷**×ªÒÆµ½LinuxÉÏ
-- [ ] Python£ºÊìÁ·Ê¹ÓÃpython½øĞĞ**ÊıÑ§½¨Ä£**´úÂëµÄ±àĞ´
-- [ ] Ëã·¨½ø½×£ºÑ§Ï°Ëã·¨½ø½×¿Î£¬ÊìÏ¤³£¼ûµÄËã·¨Á÷³Ì£¬±¸Èü**À¶ÇÅ±­¹úÈü**
-- [ ] Git/Github£ºÊìÏ¤Ê¹ÓÃGit/GithubÀ´¹ÜÀí×Ô¼ºµÄ´úÂë
-- [ ] LaTex£ºÊìÁ·Ê¹ÓÃLaTex´úÌæword½øĞĞ**ÂÛÎÄ**µÄÊéĞ´
-- [ ] Java£ºÊìÁ·Ê¹ÓÃJava½øĞĞÏîÄ¿¿ª·¢
-- [ ] WebÈı¼şÌ×£ºÊìÁ·HTML¡¢CSS¡¢JavaScript£¬ÄÜ¹»¶ÀÁ¢Íê³É¼òµ¥µÄÍøÒ³Éè¼Æ
+## å¤§äºŒä¸Š
+### æ ¸å¿ƒä»»åŠ¡
+- [x] markdownï¼šç†Ÿæ‚‰markdownåŸºæœ¬è¯­æ³•ï¼Œå¹¶åº”ç”¨äºæ—¥å¸¸çš„**ç¬”è®°**ä¹¦å†™
+- [ ] Vimï¼šç†Ÿç»ƒä½¿ç”¨Vimè¿›è¡Œæ–‡æœ¬ç¼–è¾‘ï¼Œå¹¶é€æ¸æ›¿ä»£wordç­‰æˆä¸ºä¸»æµ**æ–‡æœ¬ç¼–è¾‘å™¨**
+- [ ] Linuxï¼šç†Ÿæ‚‰Linuxå¸¸è§æŒ‡ä»¤ä»¥åŠä½¿ç”¨æ–¹æ³•ï¼Œé€æ­¥å°†**å¼€å‘å·¥ä½œ**è½¬ç§»åˆ°Linuxä¸Š
+- [ ] Pythonï¼šç†Ÿç»ƒä½¿ç”¨pythonè¿›è¡Œ**æ•°å­¦å»ºæ¨¡**ä»£ç çš„ç¼–å†™
+- [ ] ç®—æ³•è¿›é˜¶ï¼šå­¦ä¹ ç®—æ³•è¿›é˜¶è¯¾ï¼Œç†Ÿæ‚‰å¸¸è§çš„ç®—æ³•æµç¨‹ï¼Œå¤‡èµ›**è“æ¡¥æ¯å›½èµ›**
+- [ ] Git/Githubï¼šç†Ÿæ‚‰ä½¿ç”¨Git/Githubæ¥ç®¡ç†è‡ªå·±çš„ä»£ç 
+- [ ] LaTexï¼šç†Ÿç»ƒä½¿ç”¨LaTexä»£æ›¿wordè¿›è¡Œ**è®ºæ–‡**çš„ä¹¦å†™
+- [ ] Javaï¼šç†Ÿç»ƒä½¿ç”¨Javaè¿›è¡Œé¡¹ç›®å¼€å‘
+- [ ] Webä¸‰ä»¶å¥—ï¼šç†Ÿç»ƒHTMLã€CSSã€JavaScriptï¼Œèƒ½å¤Ÿç‹¬ç«‹å®Œæˆç®€å•çš„ç½‘é¡µè®¾è®¡
 
-### Á÷³Ì
+### æµç¨‹
 ```mermaid
 graph LR
     A[Git/Github]
@@ -25,13 +25,14 @@ graph LR
     G[HTML]
     H[CSS]
     I[JavaScript]
-    J((Ëã·¨½ø½×))
-    K[ÊıÑ§½¨Ä£]
+    J((ç®—æ³•è¿›é˜¶))
+    K[æ•°å­¦å»ºæ¨¡]
     L[LaTex]
     M((Spicy))
     N((NumPy))
     O((Matplotlib))
     P((Pandas))
+    R[JUnit]
 
     A --> B
     A --> E
@@ -44,6 +45,7 @@ graph LR
     E --> N
     E --> O
     E --> P
+    F --> R
     G --> H
     H --> I
     L --> K
@@ -53,45 +55,45 @@ graph LR
     P --> K
 ```
 
-### Ñ§Ï°²Î¿¼
-[CS×ÔÑ§Ö¸ÄÏ](https://csdiy.wiki/)
-[²ËÄñ½Ì³Ì](http://www.runoob.com/)
+### å­¦ä¹ å‚è€ƒ
+[CSè‡ªå­¦æŒ‡å—](https://csdiy.wiki/)
+[èœé¸Ÿæ•™ç¨‹](http://www.runoob.com/)
 
-#### Ëã·¨½ø½×
+#### ç®—æ³•è¿›é˜¶
 [AcWing](http://www.acwing.com/)
-[Âå¹È](https://www.luogu.com.cn/)
+[æ´›è°·](https://www.luogu.com.cn/)
 
 #### Vim
-[ÖĞÎÄ°æ½Ì³Ì](https://wsdjeg.net/vim-galore-zh-cn/)
+[ä¸­æ–‡ç‰ˆæ•™ç¨‹](https://wsdjeg.net/vim-galore-zh-cn/)
 
 #### Git
-[ÊÓÆµ½Ì³Ì](https://www.bilibili.com/video/BV1vy4y1s7k6/?vd_source=5b8f11e7177b71b6595f8aece955601f)
-[ÎÄ×Ö½Ì³Ì](https://git-scm.com/book/zh/v2)
-[½»»¥Ê½½Ì³Ì](https://learngitbranching.js.org/?locale=zh_CN)
-[ÍØÕ¹](https://cbea.ms/git-commit/)
+[è§†é¢‘æ•™ç¨‹](https://www.bilibili.com/video/BV1vy4y1s7k6/?vd_source=5b8f11e7177b71b6595f8aece955601f)
+[æ–‡å­—æ•™ç¨‹](https://git-scm.com/book/zh/v2)
+[äº¤äº’å¼æ•™ç¨‹](https://learngitbranching.js.org/?locale=zh_CN)
+[æ‹“å±•](https://cbea.ms/git-commit/)
 
 #### Github
-[¹Ù·½½Ì³Ì](https://docs.github.com/zh/get-started)
-[ÏîÄ¿ÍÆ¼ö](https://hellogithub.com/)
+[å®˜æ–¹æ•™ç¨‹](https://docs.github.com/zh/get-started)
+[é¡¹ç›®æ¨è](https://hellogithub.com/)
 
 #### LaTex
-[°²×°](https://github.com/OsbertWang/install-latex-guide-zh-cn)
-[½Ì³Ì](https://mirrors.bfsu.edu.cn/CTAN/info/lshort/chinese/lshort-zh-cn.pdf)
-[Á·Ï°](https://www.overleaf.com/)
+[å®‰è£…](https://github.com/OsbertWang/install-latex-guide-zh-cn)
+[æ•™ç¨‹](https://mirrors.bfsu.edu.cn/CTAN/info/lshort/chinese/lshort-zh-cn.pdf)
+[ç»ƒä¹ ](https://www.overleaf.com/)
 
 #### Python
-[»ù´¡½Ì³Ì](https://www.codecademy.cn/tutorial/python/)
-[ScipyÎÄµµ](https://docs.scipy.org.cn/doc/scipy/)
-[NumPyÎÄµµ](https://numpy.org/doc/stable/user/index.html)
-[MatplotlibÎÄµµ](https://matplotlib.org/stable/users/index.html)
-[PandasÎÄµµ](https://pandas.pydata.org/docs/user_guide/index.html)
+[åŸºç¡€æ•™ç¨‹](https://www.codecademy.cn/tutorial/python/)
+[Scipyæ–‡æ¡£](https://docs.scipy.org.cn/doc/scipy/)
+[NumPyæ–‡æ¡£](https://numpy.org/doc/stable/user/index.html)
+[Matplotlibæ–‡æ¡£](https://matplotlib.org/stable/users/index.html)
+[Pandasæ–‡æ¡£](https://pandas.pydata.org/docs/user_guide/index.html)
 
 ### Java
-[»ù´¡½Ì³Ì](https://how2j.cn/)
+[åŸºç¡€æ•™ç¨‹](https://how2j.cn/)
 
 ### Web
-[HTMLÎÄµµ](https://developer.mozilla.org/zh-CN/docs/Learn/HTML)
-[CSSÎÄµµ](https://developer.mozilla.org/zh-CN/docs/Learn/CSS)
-[JavaScriptÎÄµµ](https://developer.mozilla.org/zh-CN/docs/Learn/JavaScript)
+[HTMLæ–‡æ¡£](https://developer.mozilla.org/zh-CN/docs/Learn/HTML)
+[CSSæ–‡æ¡£](https://developer.mozilla.org/zh-CN/docs/Learn/CSS)
+[JavaScriptæ–‡æ¡£](https://developer.mozilla.org/zh-CN/docs/Learn/JavaScript)
 
-[»Øµ½¶¥²¿](#×ÔÑ§±Ê¼Ç)
+[å›åˆ°é¡¶éƒ¨](#è‡ªå­¦ç¬”è®°)

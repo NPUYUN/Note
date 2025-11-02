@@ -41,16 +41,16 @@ graph LR
     B --> G
     B --> L
     C --> D
-    E --> M
     E --> N
-    E --> O
-    E --> P
     F --> R
     G --> H
     H --> I
     L --> K
-    M --> K
+    N --> M
+    N --> O
+    O --> P
     N --> K
+    M --> K
     O --> K
     P --> K
 ```

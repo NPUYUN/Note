@@ -248,5 +248,11 @@ public class Lambda {
                 .get();
         System.out.println(first);
 
+        // 是否存在：anyMatch(Predicate<T>)
+        boolean any = men
+                .stream()
+                .anyMatch(h -> h.age >= 18 && h.age <= 50);
+        System.out.println(any);
+
     }
 }

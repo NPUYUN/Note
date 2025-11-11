@@ -8,9 +8,9 @@
 - [ ] Linux：熟悉Linux常见指令以及使用方法，逐步将**开发工作**转移到Linux上
 - [ ] Python：熟练使用python进行**数学建模**代码的编写
 - [ ] 算法进阶：学习算法进阶课，熟悉常见的算法流程，备赛**蓝桥杯国赛**
-- [ ] Git/Github：熟悉使用Git/Github来管理自己的代码
+- [x] Git/Github：熟悉使用Git/Github来管理自己的代码
 - [ ] LaTex：熟练使用LaTex代替word进行**论文**的书写
-- [ ] Java：熟练使用Java进行项目开发
+- [x] Java：熟练使用Java进行项目开发
 - [ ] Web三件套：熟练HTML、CSS、JavaScript，能够独立完成简单的网页设计
 
 ### 流程

@@ -1,0 +1,74 @@
+@startuml
+class LogisticsRouteInformationSystem
+class ShippingService
+class TransportRoute
+class ResponsiblePerson
+class TransferHub
+class DomesticShipping
+class PeripheralShipping
+class OutboundShipping
+class SeaFreight
+
+LogisticsRouteInformationSystem "1" --> "*" ShippingService:services
+LogisticsRouteInformationSystem "1" --> "*" TransportRoute:routes
+ShippingService <|-- DomesticShipping
+ShippingService <|-- PeripheralShipping
+ShippingService <|-- OutboundShipping
+ShippingService <|-- SeaFreight
+TransportRoute "1" --> "1" ResponsiblePerson:person
+TransportRoute "1" --> "*" TransferHub:hubs
+ShippingService "1" --> "1" TransportRoute:route
+
+class LogisticsRouteInformationSystem{
+    + addService(service : ShippingService) : void
+    + addRoute(route : TransportRoute) : void
+    + displayAllServices() : void
+    + displayAllRoutes() : void
+    + getServices(departure : String , destination : String) : List<ShippingService>
+    + getRoutesContainsHub(hub : TransferHub) : List<TransportRoute>
+    + getRoutesContainsPerson(person : ResponsiblePerson) : List<TransportRoute>
+}
+
+
+class ShippingService{
+    - uniqueCodeOfService : String
+    - title : String
+    - departure : String
+    - destination : String
+    - sellingPrice : double
+    - carrierCompanyName : String
+}
+
+class TransportRoute{
+    - uniqueCodeOfRoute : String
+    - name : String
+}
+
+class ResponsiblePerson{
+    - ID : String
+    - name : String
+    - homeTelephoneNumber : String
+    - QQ : String
+    - email : String
+}
+
+class TransferHub{
+    - name : String
+    - type : String
+    - province : String
+}
+
+class PeripheralShipping{
+    - productFeatureDescription : String
+}
+
+class OutboundShipping{
+    - lengthOfStay : int
+}
+
+class SeaFreight{
+    - lengthOfStay : int
+    - shippingCompany : String
+}
+
+@enduml

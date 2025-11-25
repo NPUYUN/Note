@@ -69,3 +69,21 @@ pandas.DataFrame(data=None, index=None, columns=None, dtype=None, copy=False)
 (34) DataFrame.transpose()：转置DataFrame，即行列互换
 ... 其他方法请参考Pandas官方文档。
 """
+
+# 实例1：创建一个简单的DataFrame
+data = {
+    'Name': ['Alice', 'Bob', 'Charlie'],
+    'Age': [25, 30, 35],
+    'City': ['New York', 'Los Angeles', 'Chicago']
+}
+df = pd.DataFrame(data)
+print(df)
+
+# 实例2：使用自定义索引和列创建DataFrame
+data = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
+index = ['Row1', 'Row2', 'Row3']
+columns = ['Col1', 'Col2', 'Col3']
+df_custom = pd.DataFrame(data, index=index, columns=columns)
+print(df_custom)
+
+
